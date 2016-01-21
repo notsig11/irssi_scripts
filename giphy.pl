@@ -30,7 +30,7 @@ sub searchGiphy {
     my $link = $obj->{data}[int(rand(scalar(keys $obj->{data})))]->{url};
 
 	if ($dest->{type} eq "CHANNEL" || $dest->{type} eq "QUERY") {
-        $dest->command("/msg " . $dest->{name} . " GIPHY $search " . $link);
+        $dest->command("/msg " . $dest->{name} . " " . $link);
 	}
 
 }
